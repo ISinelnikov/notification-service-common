@@ -9,16 +9,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RichWrapper {
     private final String userId;
     private final String templateId;
-    private final RichNotification firebaseNotification;
+    private final RichNotification notification;
 
     @JsonCreator
-    public RichWrapper(@JsonProperty("firebaseKey") String firebaseKey,
-            @JsonProperty("userId") String userId,
+    public RichWrapper(@JsonProperty("userId") String userId,
             @JsonProperty("templateId") String templateId,
-            @JsonProperty("firebaseNotification") RichNotification firebaseNotification) {
+            @JsonProperty("notification") RichNotification notification) {
         this.userId = Objects.requireNonNull(userId, "User id can't be null.");
         this.templateId = Objects.requireNonNull(templateId, "Template id can't be null.");
-        this.firebaseNotification = Objects.requireNonNull(firebaseNotification,
+        this.notification = Objects.requireNonNull(notification,
                 "Firebase notification can't be null.");
     }
 
@@ -30,16 +29,16 @@ public class RichWrapper {
         return userId;
     }
 
-    public RichNotification getFirebaseNotification() {
-        return firebaseNotification;
+    public RichNotification getNotification() {
+        return notification;
     }
 
     @Override
     public String toString() {
         return "RichWrapper{" +
-                ", userId='" + userId + '\'' +
+                "userId='" + userId + '\'' +
                 ", templateId='" + templateId + '\'' +
-                ", firebaseNotification=" + firebaseNotification +
+                ", notification=" + notification +
                 '}';
     }
 }
