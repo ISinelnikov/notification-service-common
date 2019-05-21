@@ -9,7 +9,7 @@
   <version>${pom.version}</version>
 
   <properties>
-    <pom.version>1.0.1</pom.version>
+    <pom.version>1.0.0-public</pom.version>
     <jdk.version>1.8</jdk.version>
   </properties>
 
