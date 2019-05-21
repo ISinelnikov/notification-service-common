@@ -4,6 +4,8 @@ This projects contains the part of the public version notification project.
 
 This part contains common objects and utils for projects:
 
+Other parts this application:
+
 Main node: https://github.com/aganimm/notification-service-main-node
 
 Proxy node: https://github.com/aganimm/notification-service-proxy-node
