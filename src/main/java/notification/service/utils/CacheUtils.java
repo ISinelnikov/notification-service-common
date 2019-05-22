@@ -30,6 +30,11 @@ public final class CacheUtils {
                 .build(loader::apply);
     }
 
+    @Nullable
+    public static <V> V getValue(@Nullable Optional<V> optional) {
+        return optional != null ? optional.orElse(null) : null;
+    }
+
     public static <K, V> List<V> updateListByMap(List<V> fireList, ConcurrentMap<K, Optional<V>> fireCache) {
         List<V> currentCacheValues = fireCache
                 .values()
